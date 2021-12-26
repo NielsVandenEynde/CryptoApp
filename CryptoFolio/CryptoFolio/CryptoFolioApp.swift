@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct CryptoFolioApp: App {
+    @StateObject var viewRouter = ViewRouter()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ParentView().environmentObject(viewRouter)
         }
     }
 }
