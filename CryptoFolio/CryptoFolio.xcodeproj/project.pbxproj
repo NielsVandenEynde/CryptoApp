@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C2C15DA132265F3B17F426E /* Pods_CryptoFolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF17ECA21F4DA802DD50D9A /* Pods_CryptoFolio.framework */; };
+		34119B70277E673900C9042F /* CoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34119B6F277E673900C9042F /* CoinViewModel.swift */; };
+		34119B72277E6B8000C9042F /* CoinDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34119B71277E6B8000C9042F /* CoinDetailView.swift */; };
 		347D12072778C6B8008B8FDB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D12062778C6B8008B8FDB /* LoginViewModel.swift */; };
 		347D12092778CD44008B8FDB /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D12082778CD44008B8FDB /* ParentView.swift */; };
 		347D120C2778CDC2008B8FDB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D120B2778CDC2008B8FDB /* LoginView.swift */; };
@@ -16,12 +19,17 @@
 		347D12142778E061008B8FDB /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D12132778E061008B8FDB /* Credentials.swift */; };
 		347D12172778F0A2008B8FDB /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D12162778F0A2008B8FDB /* UserAPI.swift */; };
 		347D1219277917DF008B8FDB /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D1218277917DF008B8FDB /* RegisterView.swift */; };
+		347D121B27792B15008B8FDB /* CoinAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D121A27792B15008B8FDB /* CoinAPI.swift */; };
+		347D121D277932DE008B8FDB /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D121C277932DE008B8FDB /* Coin.swift */; };
+		347D121F2779397B008B8FDB /* CoinListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D121E2779397B008B8FDB /* CoinListViewModel.swift */; };
 		347E0DCD2777833E00A26C8A /* CryptoFolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347E0DCC2777833E00A26C8A /* CryptoFolioApp.swift */; };
 		347E0DD12777834000A26C8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347E0DD02777834000A26C8A /* Assets.xcassets */; };
 		347E0DD42777834000A26C8A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347E0DD32777834000A26C8A /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34119B6F277E673900C9042F /* CoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewModel.swift; sourceTree = "<group>"; };
+		34119B71277E6B8000C9042F /* CoinDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailView.swift; sourceTree = "<group>"; };
 		347D12062778C6B8008B8FDB /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		347D12082778CD44008B8FDB /* ParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentView.swift; sourceTree = "<group>"; };
 		347D120B2778CDC2008B8FDB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -31,10 +39,16 @@
 		347D12132778E061008B8FDB /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		347D12162778F0A2008B8FDB /* UserAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		347D1218277917DF008B8FDB /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		347D121A27792B15008B8FDB /* CoinAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinAPI.swift; sourceTree = "<group>"; };
+		347D121C277932DE008B8FDB /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		347D121E2779397B008B8FDB /* CoinListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListViewModel.swift; sourceTree = "<group>"; };
 		347E0DC92777833E00A26C8A /* CryptoFolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoFolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		347E0DCC2777833E00A26C8A /* CryptoFolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoFolioApp.swift; sourceTree = "<group>"; };
 		347E0DD02777834000A26C8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		347E0DD32777834000A26C8A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		462551541ED4C432FAAF890E /* Pods-CryptoFolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoFolio.debug.xcconfig"; path = "Target Support Files/Pods-CryptoFolio/Pods-CryptoFolio.debug.xcconfig"; sourceTree = "<group>"; };
+		DAF17ECA21F4DA802DD50D9A /* Pods_CryptoFolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoFolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E684D1B2870E6A5330F6F45C /* Pods-CryptoFolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoFolio.release.xcconfig"; path = "Target Support Files/Pods-CryptoFolio/Pods-CryptoFolio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C2C15DA132265F3B17F426E /* Pods_CryptoFolio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				347D12132778E061008B8FDB /* Credentials.swift */,
+				347D121C277932DE008B8FDB /* Coin.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -60,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				347D12062778C6B8008B8FDB /* LoginViewModel.swift */,
+				347D121E2779397B008B8FDB /* CoinListViewModel.swift */,
+				34119B6F277E673900C9042F /* CoinViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -73,6 +91,7 @@
 				347D120F2778CEAB008B8FDB /* ViewRouter.swift */,
 				347D12112778CF0C008B8FDB /* Page.swift */,
 				347D1218277917DF008B8FDB /* RegisterView.swift */,
+				34119B71277E6B8000C9042F /* CoinDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -81,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				347D12162778F0A2008B8FDB /* UserAPI.swift */,
+				347D121A27792B15008B8FDB /* CoinAPI.swift */,
 			);
 			name = services;
 			path = ../services;
@@ -91,6 +111,8 @@
 			children = (
 				347E0DCB2777833E00A26C8A /* CryptoFolio */,
 				347E0DCA2777833E00A26C8A /* Products */,
+				AE89010B76E15EBE83061951 /* Pods */,
+				D7DC8CA617869269269ACA83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +146,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		AE89010B76E15EBE83061951 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				462551541ED4C432FAAF890E /* Pods-CryptoFolio.debug.xcconfig */,
+				E684D1B2870E6A5330F6F45C /* Pods-CryptoFolio.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D7DC8CA617869269269ACA83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAF17ECA21F4DA802DD50D9A /* Pods_CryptoFolio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 347E0DD72777834000A26C8A /* Build configuration list for PBXNativeTarget "CryptoFolio" */;
 			buildPhases = (
+				DEF56E0BFC1E95D2728B7E5D /* [CP] Check Pods Manifest.lock */,
 				347E0DC52777833E00A26C8A /* Sources */,
 				347E0DC62777833E00A26C8A /* Frameworks */,
 				347E0DC72777833E00A26C8A /* Resources */,
+				9911DB5E708524553A81BD4E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,17 +230,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9911DB5E708524553A81BD4E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoFolio/Pods-CryptoFolio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoFolio/Pods-CryptoFolio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CryptoFolio/Pods-CryptoFolio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEF56E0BFC1E95D2728B7E5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CryptoFolio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		347E0DC52777833E00A26C8A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				347D12092778CD44008B8FDB /* ParentView.swift in Sources */,
+				347D121F2779397B008B8FDB /* CoinListViewModel.swift in Sources */,
 				347D1219277917DF008B8FDB /* RegisterView.swift in Sources */,
 				347D12102778CEAB008B8FDB /* ViewRouter.swift in Sources */,
 				347D12142778E061008B8FDB /* Credentials.swift in Sources */,
 				347D12122778CF0C008B8FDB /* Page.swift in Sources */,
 				347E0DCD2777833E00A26C8A /* CryptoFolioApp.swift in Sources */,
+				347D121D277932DE008B8FDB /* Coin.swift in Sources */,
+				34119B72277E6B8000C9042F /* CoinDetailView.swift in Sources */,
+				347D121B27792B15008B8FDB /* CoinAPI.swift in Sources */,
+				34119B70277E673900C9042F /* CoinViewModel.swift in Sources */,
 				347D120C2778CDC2008B8FDB /* LoginView.swift in Sources */,
 				347D12072778C6B8008B8FDB /* LoginViewModel.swift in Sources */,
 				347D120E2778CE06008B8FDB /* CoinListView.swift in Sources */,
@@ -328,6 +416,7 @@
 		};
 		347E0DD82777834000A26C8A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 462551541ED4C432FAAF890E /* Pods-CryptoFolio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -358,6 +447,7 @@
 		};
 		347E0DD92777834000A26C8A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E684D1B2870E6A5330F6F45C /* Pods-CryptoFolio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

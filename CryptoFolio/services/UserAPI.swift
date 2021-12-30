@@ -13,8 +13,13 @@ struct LoginRequestBody: Codable {
     let password: String
 }
 class UserAPI {
+    init(){
+        
+    }
     private(set) var token : String = ""
-    
+    func getInstance(){
+        
+    }
     func login(username: String, password: String, completion: @escaping (Result<String,AuthenticationError>) -> Void){
         guard let url = URL(string: "http://localhost:5000/api/Account/login") else {
             completion(.failure(.custom(errorMessage:"URL is not correct")))
@@ -33,21 +38,17 @@ class UserAPI {
                 return
             }
             guard let httpResponse = response as? HTTPURLResponse,
-                        (200...299).contains(httpResponse.statusCode) else {
-                        print(response)
-                        return
-            }
-            
-            
-            guard let string = String(data: data, encoding: .utf8) else {
+                  (200...299).contains(httpResponse.statusCode) else {
+                      print(response)
+                      return
+                  }
+            guard let token = String(data: data, encoding: .utf8) else {
                 completion(.failure(.invalidCredentials))
                 return
             }
-            self.token=string
-            print(self.token)
-            completion(.success(self.token))
+            completion(.success(token))
             
-           
+            
             
         }.resume()
         

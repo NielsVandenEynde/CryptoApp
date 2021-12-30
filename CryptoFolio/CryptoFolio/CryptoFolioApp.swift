@@ -12,6 +12,7 @@ struct CryptoFolioApp: App {
     @StateObject var viewRouter = ViewRouter()
     
     var body: some Scene {
+
         WindowGroup {
             ParentView().environmentObject(viewRouter)
         }

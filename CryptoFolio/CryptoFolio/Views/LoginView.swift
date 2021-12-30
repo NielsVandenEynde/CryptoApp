@@ -14,9 +14,8 @@ let btnColor = Color(red: 0.0, green: 0.059, blue: 0.18)
 
 struct LoginView : View {
     @StateObject private var loginVM = LoginViewModel()
-    @EnvironmentObject var viewRouter: ViewRoutert
-    @State var username: String = ""
-    @State var password: String = ""
+    @EnvironmentObject var viewRouter: ViewRouter
+
     
     var body: some View {
        
@@ -39,6 +38,9 @@ struct LoginView : View {
             Button(action: {
                 print("Button tapped")
                 loginVM.login()
+                //if loginVM.isLoggedIn{
+                //viewRouter.currentPage = Page.page3
+                //}
                 
             }) {
                LoginButtonContent()
@@ -50,6 +52,11 @@ struct LoginView : View {
             
         }
         .padding()
+        .onChange(of: loginVM.isLoggedIn){newValue in
+            if newValue {
+                viewRouter.currentPage = Page.page3
+            }
+        }
         
         
         

@@ -9,13 +9,16 @@ import SwiftUI
 
 struct ParentView: View {
     @EnvironmentObject var viewRouter: ViewRouter
-
+    
     var body: some View {
         switch viewRouter.currentPage {
             case .page1:
                 LoginView()
             case .page2:
+                RegisterView()
+            case .page3:
                 CoinListView()
+            
         }
     }
 }
