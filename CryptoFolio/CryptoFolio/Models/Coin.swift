@@ -14,14 +14,15 @@ struct Coin: Decodable, Identifiable{
         name = ""
         current_price = 0.0
         price_change_percentage_24h = 0.0
-        chartPoints = []
+        image = ""
     }
-    var chartPoints : [Double]?
-    var id: String?
-    var symbol: String?
-    var name: String?
-    var current_price: Double?
-    var price_change_percentage_24h: Double?
+
+    let image: String
+    var id: String
+    var symbol: String
+    var name: String
+    var current_price: Double
+    var price_change_percentage_24h: Double
     
 }
 

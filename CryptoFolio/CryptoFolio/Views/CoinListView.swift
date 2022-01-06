@@ -13,14 +13,17 @@ struct CoinListView: View {
     var body: some View {
         NavigationView{
         List(vm.listOfCoins){ coin in
-            NavigationLink(destination: CoinDetailView() ){
-            CoinListItem(symbol:coin.symbol,
+            NavigationLink(destination: CoinDetailView(coinID:coin.id) ){
+                CoinListItem(image:coin.image,
+                        symbol:coin.symbol,
                          name:coin.name,
                          price:coin.current_price,
                          pct:coin.price_change_percentage_24h)
             }
         }
+        .listStyle(PlainListStyle())
         .onAppear(){
+            
             vm.loadCoins()
         }
         }
@@ -30,31 +33,50 @@ struct CoinListView: View {
 
 
 struct CoinListItem:  View {
-    let symbol: String?
-    let name: String?
-    let price : Double?
-    let pct: Double?
+    let imageWidthMultiplier = 0.1
+    let image: String
+    let symbol: String
+    let name: String
+    let price : Double
+    let pct: Double
     var body: some View{
+        GeometryReader{ geo in
+        HStack{
+            if #available(iOS 15.0, *) {
+                AsyncImage(url: URL(string: image),content: { phase in
+                    switch phase {
+                            case .empty:
+                                Text("gey")
+                            case .success(let image):
+                                image.resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(maxWidth: geo.size.width*imageWidthMultiplier, maxHeight: geo.size.width*imageWidthMultiplier)
+                            case .failure:
+                                Text("gey")
+                            @unknown default:
+                                Text("gey")
+                    }
+                    })
+                }
+                 
         VStack{
             HStack {
-                Text(name ?? "nil").bold()
+
+                Text(name).bold()
                 Spacer()
 
             }
             HStack {
-                Text(symbol ?? "nil")
+                Text(symbol)
                 Spacer()
-                Text("$\(price ?? 0.0,specifier: "%.2f")").bold()
+                Text("$\(price ,specifier: "%.2f")").bold()
                     
-                Text("\(pct ?? 0.0,specifier: "%.2f")%")
-                    .foregroundColor(pct! > 0.0 ? .green : pct! < 0.0 ? .red : .gray)
-                
-                
-                
+                Text("\(pct ,specifier: "%.2f")%")
+                    .foregroundColor(pct > 0.0 ? .green : pct < 0.0 ? .red : .gray)
             }
-            
-            
         }
+        }
+    }
     }
 }
 
