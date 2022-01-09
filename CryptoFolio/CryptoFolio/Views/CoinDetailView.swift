@@ -10,6 +10,7 @@ import SwiftUICharts
 
 struct CoinDetailView: View {
     @State var selectedPeriod: Period = .day
+    
     init(coin: Coin){
         vm = CoinViewModel(coin: coin)
     }
@@ -55,11 +56,10 @@ struct LineChartView: View {
                                             xAxisLabelsFrom     : .chartData(),
                                             yAxisGridStyle      : gridStyle,
                                             yAxisLabelPosition  : .leading,
-                                            
                                             yAxisLabelColour    : Color.primary,
                                             yAxisNumberOfLabels : 3,
-
                                             globalAnimation     : .easeOut(duration: 1))
+            
             let data = LineChartData(dataSets:LineDataSet(dataPoints:points),metadata:metadata,chartStyle: chartStyle)
             LineChart(chartData: data )
                 .id(data.id)
@@ -70,9 +70,7 @@ struct LineChartView: View {
                 .yAxisLabels(chartData: data)
                 .infoBox(chartData: data)
                 .headerBox(chartData: data)
-                
-                //.legends(chartData: data, columns: [GridItem(.flexible()), GridItem(.flexible())])
-                //.frame(minWidth: 150, maxWidth: 700, minHeight: 150, idealHeight: 250, maxHeight: 1000, alignment: .center)
+
             Spacer()
             Picker("Chart period", selection: $selectedPeriod) {
                 ForEach(Period.allCases, id: \.self) { item in

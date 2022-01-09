@@ -17,7 +17,6 @@
 		347D120E2778CE06008B8FDB /* CoinListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D120D2778CE06008B8FDB /* CoinListView.swift */; };
 		347D12102778CEAB008B8FDB /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D120F2778CEAB008B8FDB /* ViewRouter.swift */; };
 		347D12122778CF0C008B8FDB /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D12112778CF0C008B8FDB /* Page.swift */; };
-		347D12142778E061008B8FDB /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D12132778E061008B8FDB /* Credentials.swift */; };
 		347D12172778F0A2008B8FDB /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D12162778F0A2008B8FDB /* UserAPI.swift */; };
 		347D121B27792B15008B8FDB /* CoinAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D121A27792B15008B8FDB /* CoinAPI.swift */; };
 		347D121D277932DE008B8FDB /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D121C277932DE008B8FDB /* Coin.swift */; };
@@ -37,7 +36,6 @@
 		347D120D2778CE06008B8FDB /* CoinListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListView.swift; sourceTree = "<group>"; };
 		347D120F2778CEAB008B8FDB /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		347D12112778CF0C008B8FDB /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
-		347D12132778E061008B8FDB /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		347D12162778F0A2008B8FDB /* UserAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		347D121A27792B15008B8FDB /* CoinAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinAPI.swift; sourceTree = "<group>"; };
 		347D121C277932DE008B8FDB /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
@@ -75,7 +73,6 @@
 		347D12032778C61E008B8FDB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				347D12132778E061008B8FDB /* Credentials.swift */,
 				347D121C277932DE008B8FDB /* Coin.swift */,
 			);
 			path = Models;
@@ -292,7 +289,6 @@
 				347D12092778CD44008B8FDB /* ParentView.swift in Sources */,
 				347D121F2779397B008B8FDB /* CoinListViewModel.swift in Sources */,
 				347D12102778CEAB008B8FDB /* ViewRouter.swift in Sources */,
-				347D12142778E061008B8FDB /* Credentials.swift in Sources */,
 				347D12122778CF0C008B8FDB /* Page.swift in Sources */,
 				347E0DCD2777833E00A26C8A /* CryptoFolioApp.swift in Sources */,
 				347D121D277932DE008B8FDB /* Coin.swift in Sources */,

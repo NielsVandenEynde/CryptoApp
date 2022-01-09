@@ -24,9 +24,7 @@ struct LoginView : View {
 
         VStack {
             WelcomeText()
-            //UserImage()
             Spacer()
-            
             TextField("Username", text: $username)
                 .padding()
                 .background(lightblue)
@@ -54,9 +52,7 @@ struct LoginView : View {
                 viewRouter.currentPage = Page.page2
             }
         }
-
     }
-        
 }
 struct WelcomeText : View {
     
@@ -69,8 +65,6 @@ struct WelcomeText : View {
         Image("monerologo")
             .resizable()
             .scaledToFit()
-            
-    
     }
 }
 struct LoginButtonContent : View {
