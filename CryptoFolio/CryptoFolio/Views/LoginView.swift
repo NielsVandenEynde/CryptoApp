@@ -13,7 +13,9 @@ let btnColor = Color(red: 0.0, green: 0.059, blue: 0.18)
 
 
 struct LoginView : View {
-    @StateObject private var loginVM = LoginViewModel()
+    @State var username: String = ""
+    @State var password: String = ""
+    @ObservedObject private var loginVM = LoginViewModel()
     @EnvironmentObject var viewRouter: ViewRouter
 
     
@@ -25,41 +27,34 @@ struct LoginView : View {
             //UserImage()
             Spacer()
             
-            TextField("Username", text: $loginVM.username)
+            TextField("Username", text: $username)
                 .padding()
                 .background(lightblue)
                 .cornerRadius(5.0)
                 .padding(.bottom, 20)
-            SecureField("Password", text: $loginVM.password)
+            SecureField("Password", text: $password)
                 .padding()
                 .background(lightblue)
                 .cornerRadius(5.0)
                 .padding(.bottom, 20)
             Button(action: {
-                print("Button tapped")
-                loginVM.login()
-                //if loginVM.isLoggedIn{
-                //viewRouter.currentPage = Page.page3
-                //}
-                
+                loginVM.login(username:username,password:password)
             }) {
-               LoginButtonContent()
-            }
-            Button(action: {viewRouter.currentPage = Page.page2}){
-                Text("hello")
+                LoginButtonContent(username:$username,password:$password)
+            }.disabled(username.isEmpty || password.isEmpty)
+            
+            Button(action: {print("not available on mobile")}){
+                Text("register")
             }
             Spacer()
-            
         }
         .padding()
         .onChange(of: loginVM.isLoggedIn){newValue in
             if newValue {
-                viewRouter.currentPage = Page.page3
+                viewRouter.currentPage = Page.page2
             }
         }
-        
-        
-        
+
     }
         
 }
@@ -67,7 +62,7 @@ struct WelcomeText : View {
     
     var body: some View {
        
-        Text("Welcome!")
+        Text("Cryptofolio")
             .font(.largeTitle)
             .fontWeight(.semibold)
             .padding(.bottom, 20)
@@ -79,13 +74,15 @@ struct WelcomeText : View {
     }
 }
 struct LoginButtonContent : View {
+    @Binding var username: String
+    @Binding var password: String
     var body: some View {
         Text("LOGIN")
             .font(.headline)
             .foregroundColor(.white)
             .padding()
             .frame(width: 220, height: 60)
-            .background(btnColor)
+            .background((username.isEmpty || password.isEmpty) ? Color(UIColor.lightGray) : btnColor)
             .cornerRadius(15.0)
     }
 }

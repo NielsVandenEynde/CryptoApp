@@ -15,8 +15,6 @@ struct ParentView: View {
             case .page1:
                 LoginView()
             case .page2:
-                RegisterView()
-            case .page3:
                 CoinListView()
             
         }

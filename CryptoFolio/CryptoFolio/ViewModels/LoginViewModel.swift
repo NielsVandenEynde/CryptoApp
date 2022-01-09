@@ -8,23 +8,12 @@
 import Foundation
 
 class LoginViewModel: ObservableObject {
-//    init(){
-//        self.userAPI = UserAPI()
-//        self.isLoggedIn = false
-//    }
-    var username: String = ""
-    var password: String = ""
-    @Published var userAPI = UserAPI()
+
+    private let userAPI = UserAPI()
     @Published var isLoggedIn: Bool = false
-
-    
-    var loginDisabled: Bool {
-        username.isEmpty || password.isEmpty
-        
-    }
-
-    
-    func login() {
+    @Published var errorMessage : String = ""
+ 
+    func login(username: String, password: String) {
         let defaults = UserDefaults.standard
         
         userAPI.login(username:username,password:password) { result in
@@ -36,8 +25,11 @@ class LoginViewModel: ObservableObject {
                     self.isLoggedIn = true
                 }
             case .failure(let error):
-                print(error.localizedDescription)
-            }
+                DispatchQueue.main.async {
+                    self.errorMessage = "Username or password is incorrect"
+                }
+                
+                }
         }
     }
     func logout() {

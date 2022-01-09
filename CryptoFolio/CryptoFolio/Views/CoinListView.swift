@@ -13,7 +13,7 @@ struct CoinListView: View {
     var body: some View {
         NavigationView{
         List(vm.listOfCoins){ coin in
-            NavigationLink(destination: CoinDetailView(coinID:coin.id) ){
+            NavigationLink(destination: CoinDetailView(coin:coin) ){
                 CoinListItem(image:coin.image,
                         symbol:coin.symbol,
                          name:coin.name,
@@ -27,6 +27,7 @@ struct CoinListView: View {
             vm.loadCoins()
         }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         
     }
 }
@@ -56,8 +57,8 @@ struct CoinListItem:  View {
                             @unknown default:
                                 Text("gey")
                     }
-                    })
-                }
+                })
+            }
                  
         VStack{
             HStack {

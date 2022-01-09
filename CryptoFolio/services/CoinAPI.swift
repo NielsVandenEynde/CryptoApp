@@ -27,7 +27,7 @@ class CoinAPI {
             }
             }
     func getChartData(id: String, period: Period,completion: @escaping (Result<Array<LineChartDataPoint>,CoinError>) -> Void){
-        let days : Int = 5
+        let days : Double = period.rawValue
         var req = "https://api.coingecko.com/api/v3/coins/\(id)/market_chart?vs_currency=usd&days=\(days)"
         print(req)
         AF.request(req)
@@ -36,8 +36,17 @@ class CoinAPI {
                 debugPrint(response3)
                 if let res = response3.value{
                     var arr = [LineChartDataPoint]()
-                    for thing in res.prices{
-                        arr.append(LineChartDataPoint(value: thing[1]))
+                    for point in res.prices{
+                        let date = Date(milliseconds: Int64(point[0]))
+
+                        let dayTimePeriodFormatter = DateFormatter()
+                        dayTimePeriodFormatter.dateFormat = "hh:mm, dd MMM"
+
+                        let dateString = dayTimePeriodFormatter.string(from:date)
+
+                          //print( " _ts value is \(_ts)")
+                          //print( " _ts value is \(dateString)")
+                        arr.append(LineChartDataPoint(value: point[1], description: dateString))
                     }
                     completion(.success(arr))
                 }
@@ -60,6 +69,14 @@ extension Array {
         }
     }
 }
+extension Date {
+    var millisecondsSince1970:Int64 {
+        Int64((self.timeIntervalSince1970 * 1000.0).rounded())
+    }
     
+    init(milliseconds:Int64) {
+        self = Date(timeIntervalSince1970: TimeInterval(milliseconds) / 1000)
+    }
+}
 
 
